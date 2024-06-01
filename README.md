@@ -14,6 +14,7 @@ The dataset is provided by Optiver in Kaggle competition in folder **optiver-rea
 # Modeling Approach
 Model perfomance is evaluated by root mean square percentage error 
 $$RMSPE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} ((y_i - \hat{y}_i)/y_i)^2}$$
+We begin by setting up a baseline model using the overall target mean value as the prediction for the next 10 minutes of volatility. During EDA, we add more features and investigate their correlations with the target variable. We select the three most correlated features  — wap1\_realized\_volatility, wap2\_realized\_volatility, and book\_bid\_ask\_price\_ratio\_realized\_volatility — to build linear regression and K Nearest Neighbors models. Ultimately, we use ensemble learning approaches, such as boosting, with a particular focus on the powerful gradient boosting package XGBoost.
 | Models| RMSPE |
 | ----------- | ----------- |
 | Baseline Model(Overall mean) | 1.110330|
