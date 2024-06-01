@@ -25,5 +25,6 @@ We begin by setting up a baseline model using the overall target mean value as t
 | Linear Regression | 0.352226 |
 | KNN |  0.333281 |
 |  XGBoost |  0.028044|
+| ----------- | ----------- |
 We can see that XGBoost demonstrated the best performance. 
 
