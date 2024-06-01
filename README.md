@@ -14,9 +14,11 @@ The dataset is provided by Optiver in Kaggle competition in folder **optiver-rea
 # Modeling Approach
 Model perfomance is evaluated by root mean square percentage error 
 $$RMSPE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} ((y_i - \hat{y}_i)/y_i)^2}$$
-| Syntax | Description |
+| Models| RMSPE |
 | ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+| Baseline Model(Overall mean) | 1.110330|
+| Linear Regression | 0.352226 |
+| KNN |  0.333281 |
+|  XGBoost |  0.028044|
 
 
