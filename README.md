@@ -11,6 +11,10 @@ The dataset is provided by Optiver in Kaggle competition in folder **optiver-rea
 - The total number of different stocks is 112
 - The total number of different time\_id is 3830
 # Exploratory Data Analysis
+The dataset contains six files with hundreds of millions of rows of highly granular financial data.To better understand the data, we first perform Exploratory Data Analysis (EDA) to investigate the datasets and summarize their main characteristics. We then calculate the following fundamental statistics to identify connections between features.
+- Weighted averaged price (stock valuation): $$ WAP = \frac{BidPrice*AskSize + AskPrice*BidSize}{BidSize + AskSize} $$
+- Log returns: $$r_{t_1, t_2} = \log \left( \frac{S_{t_2}}{S_{t_1}} \right),$$ where $S_t$ is the price (approximated by WAP) of the stock $S$ at time $t$
+- Realized volatility: $$\sigma = \sqrt{\sum_{t}r_{t-1, t}^2}$$
 # Modeling Approach
 Model perfomance is evaluated by root mean square percentage error 
 $$RMSPE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} ((y_i - \hat{y}_i)/y_i)^2}$$
